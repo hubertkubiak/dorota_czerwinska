@@ -26,7 +26,7 @@ gulp.task('less', function() {
             stream: true
         })) &&
         // to be changed (gulp-file refinement)
-        gulp.src('less/freelancer.less')
+        gulp.src('less/custom.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
