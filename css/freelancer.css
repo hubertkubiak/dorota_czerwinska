@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #565656;
+  color: silver;
   outline: none;
 }
 h1,
@@ -44,14 +44,14 @@ hr.star-light {
   border-color: white;
 }
 hr.star-primary {
-  border-color: white;
+  border-color: silver;
 }
 .img-centered {
   margin: 0 auto;
 }
 header {
   text-align: center;
-  background: #565656;
+  background: silver;
   color: white;
 }
 header .container {
@@ -86,7 +86,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: white;
+  background: silver;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,7 +111,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #565656;
+  color: silver;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -120,13 +120,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #565656;
+  background: silver;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #565656;
+  background: silver;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -136,9 +136,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #565656;
+  background-color: silver;
   color: white;
-  border-color: #565656;
+  border-color: silver;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -168,7 +168,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #565656;
+  background: silver;
   color: white;
 }
 @media (max-width: 767px) {
@@ -190,7 +190,7 @@ section.success {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(86, 86, 86, 0.9);
+  background: rgba(192, 192, 192, 0.9);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -271,7 +271,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #565656;
+  color: silver;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -284,14 +284,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: white;
+  background-color: silver;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #f2f2f2;
+  background-color: #b3b3b3;
 }
 .btn-outline {
   color: white;
@@ -305,14 +305,14 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #565656;
+  color: silver;
   background: white;
   border: solid 2px white;
 }
 .btn-primary {
   color: white;
-  background-color: white;
-  border-color: white;
+  background-color: silver;
+  border-color: silver;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -321,8 +321,8 @@ footer .footer-below {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #e6e6e6;
-  border-color: #e0e0e0;
+  background-color: #a7a7a7;
+  border-color: #a1a1a1;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -344,17 +344,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: white;
-  border-color: white;
+  background-color: silver;
+  border-color: silver;
 }
 .btn-primary .badge {
-  color: white;
+  color: silver;
   background-color: white;
 }
 .btn-success {
   color: white;
-  background-color: #565656;
-  border-color: #565656;
+  background-color: silver;
+  border-color: silver;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -363,8 +363,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: white;
-  background-color: #3d3d3d;
-  border-color: #373737;
+  background-color: #a7a7a7;
+  border-color: #a1a1a1;
 }
 .btn-success:active,
 .btn-success.active,
@@ -386,11 +386,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #565656;
-  border-color: #565656;
+  background-color: silver;
+  border-color: silver;
 }
 .btn-success .badge {
-  color: #565656;
+  color: silver;
   background-color: white;
 }
 .btn-social {
@@ -432,7 +432,6 @@ fieldset[disabled] .btn-success.active {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-  min-height: 100%;
   padding: 100px 0;
   text-align: center;
 }
@@ -462,7 +461,7 @@ fieldset[disabled] .btn-success.active {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: white;
+  background-color: silver;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -473,7 +472,7 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: white;
+  background-color: silver;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
