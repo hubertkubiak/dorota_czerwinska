@@ -20,7 +20,6 @@ var banner = ['/*!\n',
 gulp.task('less', function() {
     return gulp.src('less/freelancer.less')
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -28,7 +27,12 @@ gulp.task('less', function() {
         // to be changed (gulp-file refinement)
         gulp.src('less/custom.less')
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        })) &&
+        gulp.src('less/responsive.less')
+        .pipe(less())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -46,6 +50,13 @@ gulp.task('minify-css', ['less'], function() {
         })) &&
         // to be changed (gulp-file refinement)
         gulp.src('css/custom.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        })) &&
+        gulp.src('css/responsive.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
