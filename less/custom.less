@@ -1,8 +1,5 @@
 // my styles, overriding the template ones & new
-
-
 // navigation
-
 .navbar-custom {
     color: black;
     background: white;
@@ -23,63 +20,78 @@
     }
 }
 
-.navbar-nav li.active a{
+.navbar-nav li.active a {
     border-radius: 6px;
 }
 
-
 //header
-
 header {
     background-image: url("../img/head.jpg");
     background-size: 100%;
     min-height: 100vh;
+    position: relative;
+}
+
+.skills {
+    display: block;
 }
 
 .listen {
     border: white solid 3px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+        color: black;
+    }
 }
-
-.skills{
-    display: block;
-}
-
 
 // sections' elements
-
 section {
     padding: 60px 0;
 }
 
-#kontakt{
+#kontakt {
     padding-bottom: 0;
+    .contact-data{
+        text-align: center;
+        margin-bottom: 40px;
+        a{
+            color: grey;
+            font-size: 20px;
+        }
+    }
 }
 
-.form-control{
+.form-control {
     color: black;
 }
 
-.img-responsive{
+.img-responsive {
     margin: auto;
 }
 
 .portfolio-modal {
-    .modal-content{
+    .modal-content {
         min-height: initial;
     }
 }
 
-
 // decorations
-
-hr.star-light{
+hr.star-light {
     border-color: black;
 }
 
-hr.star-light:after{
+hr.star-light:after {
     display: none;
     content: none;
 }
