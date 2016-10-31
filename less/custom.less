@@ -1,10 +1,7 @@
 // my styles, overriding the template ones & new
-// main elements
-header {
-    background-image: url("../img/head.jpg");
-    background-size: 100%;
-    min-height: 100vh;
-}
+
+
+// navigation
 
 .navbar-custom {
     color: black;
@@ -30,8 +27,13 @@ header {
     border-radius: 6px;
 }
 
-hr.star-primary {
-    border-color: white;
+
+//header
+
+header {
+    background-image: url("../img/head.jpg");
+    background-size: 100%;
+    min-height: 100vh;
 }
 
 .listen {
@@ -41,41 +43,43 @@ hr.star-primary {
     padding: 10px;
 }
 
-.img-responsive{
-    margin: auto;
-}
-
-section {
-    padding: 60px 0;
-}
-
-hr.star-light{
-    border-color: black;
-}
-
-.section-silver{
-    background-color: rgba(192, 192, 192, 0.45)
-}
-
 .skills{
     display: block;
 }
 
-.form-control{
-    color: black;
+
+// sections' elements
+
+section {
+    padding: 60px 0;
 }
 
 #kontakt{
     padding-bottom: 0;
 }
 
-hr.star-light:after, hr.star-primary:after{
-    display: none;
-    content: none;
+.form-control{
+    color: black;
+}
+
+.img-responsive{
+    margin: auto;
 }
 
 .portfolio-modal {
     .modal-content{
         min-height: initial;
     }
+}
+
+
+// decorations
+
+hr.star-light{
+    border-color: black;
+}
+
+hr.star-light:after{
+    display: none;
+    content: none;
 }

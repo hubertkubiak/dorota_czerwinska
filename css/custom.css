@@ -3,11 +3,6 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-header {
-  background-image: url("../img/head.jpg");
-  background-size: 100%;
-  min-height: 100vh;
-}
 .navbar-custom {
   color: black;
   background: white;
@@ -30,8 +25,10 @@ header {
 .navbar-nav li.active a {
   border-radius: 6px;
 }
-hr.star-primary {
-  border-color: white;
+header {
+  background-image: url("../img/head.jpg");
+  background-size: 100%;
+  min-height: 100vh;
 }
 .listen {
   border: white solid 3px;
@@ -39,32 +36,28 @@ hr.star-primary {
   font-size: 25px;
   padding: 10px;
 }
-.img-responsive {
-  margin: auto;
+.skills {
+  display: block;
 }
 section {
   padding: 60px 0;
 }
-hr.star-light {
-  border-color: black;
-}
-.section-silver {
-  background-color: rgba(192, 192, 192, 0.45);
-}
-.skills {
-  display: block;
+#kontakt {
+  padding-bottom: 0;
 }
 .form-control {
   color: black;
 }
-#kontakt {
-  padding-bottom: 0;
-}
-hr.star-light:after,
-hr.star-primary:after {
-  display: none;
-  content: none;
+.img-responsive {
+  margin: auto;
 }
 .portfolio-modal .modal-content {
   min-height: initial;
+}
+hr.star-light {
+  border-color: black;
+}
+hr.star-light:after {
+  display: none;
+  content: none;
 }
