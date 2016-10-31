@@ -57,3 +57,14 @@ hr.star-light {
 .form-control {
   color: black;
 }
+#kontakt {
+  padding-bottom: 0;
+}
+hr.star-light:after,
+hr.star-primary:after {
+  display: none;
+  content: none;
+}
+.portfolio-modal .modal-content {
+  min-height: initial;
+}
