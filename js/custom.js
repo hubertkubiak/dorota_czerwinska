@@ -6,7 +6,7 @@
 
     listenButton.one("click", (function () {
         let player = "<audio controls autoplay><source src=\"music/Vivaldi_largo.mp3\" type=\"audio/mpeg\"></audio>";
-        $('.js-audio').append(player);
+        $('.js-audio').hide().append(player).fadeIn(2000);
     }));
 
     //toogling audio play/pause on listen button 
