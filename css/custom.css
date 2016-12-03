@@ -29,6 +29,13 @@ header {
 .skills {
   display: block;
 }
+audio {
+  position: fixed;
+  z-index: 999;
+  height: 36px;
+  bottom: 45px;
+  right: 10%;
+}
 .listen {
   border: white solid 3px;
   color: white;
