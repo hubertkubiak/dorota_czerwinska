@@ -41,25 +41,10 @@ gulp.task('less', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/freelancer.css')
+    return gulp.src('css/*.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        })) &&
-        // to be changed (gulp-file refinement)
-        gulp.src('css/custom.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        })) &&
-        gulp.src('css/responsive.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('css/min'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -113,7 +98,8 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
+    // Reloads the browser whenever files change
     gulp.watch('*.html', browserSync.reload);
+    gulp.watch('css/*.css', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
