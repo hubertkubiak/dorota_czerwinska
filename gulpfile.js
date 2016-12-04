@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
-var browserSync = require('browser-sync').create();
+// var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var filter = require('gulp-filter');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -18,25 +19,14 @@ var banner = ['/*!\n',
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src('less/freelancer.less')
+    var f = filter(['*', '!mixins.less', '!variables.less']);
+    return gulp.src('less/*.less')
+        .pipe(f)
         .pipe(less())
         .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        })) &&
-        // to be changed (gulp-file refinement)
-        gulp.src('less/custom.less')
-        .pipe(less())
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        })) &&
-        gulp.src('less/responsive.less')
-        .pipe(less())
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        // .pipe(browserSync.reload({
+        //     stream: true
+        // }))
 });
 
 // Minify compiled CSS
@@ -45,21 +35,23 @@ gulp.task('minify-css', ['less'], function() {
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css/min'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        // .pipe(browserSync.reload({
+        //     stream: true
+        // }))
 });
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/freelancer.js')
+    var f = filter(['*', '!jqBootstrapValidation.js']);
+    return gulp.src('js/*.js')
+        .pipe(f)
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        // .pipe(browserSync.reload({
+        //     stream: true
+        // }))
 });
 
 // Copy vendor libraries from /node_modules into /vendor
@@ -85,21 +77,25 @@ gulp.task('copy', function() {
 gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
-    browserSync.init({
-        server: {
-            baseDir: ''
-        },
-    })
-})
+// gulp.task('browserSync', function() {
+//     browserSync.init({
+//         server: {
+//             baseDir: ''
+//         },
+//     })
+// })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('watch', function() {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('css/*.css', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
+    // gulp.watch('*.html', browserSync.reload);
+    // gulp.watch('css/*.css', browserSync.reload);
+    // gulp.watch('js/*.js', browserSync.reload);
 });
+
+
+
+
