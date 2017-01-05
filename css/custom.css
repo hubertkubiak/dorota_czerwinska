@@ -17,11 +17,11 @@
 .navbar-custom .navbar-brand {
   color: black;
 }
+.navbar-custom .navbar-toggle {
+  border: 2px solid black;
+}
 .navbar-nav li.active a {
   border-radius: 6px;
-}
-.navbar-toggle {
-  display: block!important;
 }
 header {
   background-image: url("../img/head.jpg");
@@ -60,8 +60,17 @@ audio {
 section {
   padding: 60px 0;
 }
+.youtube-video {
+  text-align: center;
+}
+.youtube-video iframe {
+  min-width: 350px;
+}
 #kontakt {
   padding-bottom: 0;
+}
+#kontakt .row-contact {
+  margin-bottom: 40px;
 }
 #kontakt .contact-data {
   text-align: center;
